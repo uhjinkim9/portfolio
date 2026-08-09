@@ -56,7 +56,7 @@ export default function Home() {
           </div>
           <aside className="mt-16 border-t-2 border-ink lg:mt-0">
             {[
-              ["NOW", "그룹웨어 SaaS 구축"],
+              ["LATEST", "그룹웨어 SaaS 운영 배포 완료"],
               ["FOCUS", "Architecture · DX · DevOps"],
               ["EMAIL", "uhjinkim9@gmail.com"],
             ].map(([k, v]) => (
@@ -142,7 +142,7 @@ export default function Home() {
                   className={`flex flex-col justify-center lg:col-span-5 ${i % 2 ? "lg:order-1" : ""}`}
                 >
                   <p className="text-xs font-black uppercase tracking-[.14em] text-ember">
-                    {p.kind}
+                    {p.kind} · {p.period}
                   </p>
                   <h3 className="mt-4 text-[1.6rem] font-black tracking-tight md:text-[2.65rem]">
                     {p.title}

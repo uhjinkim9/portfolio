@@ -26,7 +26,8 @@
 - RabbitMQ를 활용해 메인 API와 알림·메일 후처리 로직 분리
 - 인사 담당자의 피드백을 근태·연차 비즈니스 로직과 REST API로 구현
 - 외부 솔루션 공백에 대응해 Node.js·WebSocket 기반 메신저 MVP를 **3일 내 단독 구축**
-- Kubernetes와 ArgoCD 기반 배포 환경 및 자체 메일 인프라 구성
+- `development → stage → production` GitHub 브랜치 흐름과 환경별 반영 기준 정립
+- Kubernetes 운영 배포까지 완료하고 자체 메일 인프라 구성
 
 ### Poo Diary
 
