@@ -57,6 +57,7 @@ export default function ProjectDetail({ params }: Props) {
           <div className="relative aspect-[16/8.5] overflow-hidden border border-line bg-white p-5 md:p-10">
             <Image src={project.heroImage} alt={`${project.title} 대표 이미지`} fill priority className="object-contain p-5 md:p-10" sizes="(max-width: 1280px) 100vw, 1240px" />
           </div>
+          {project.heroCaption && <p className="mt-3 text-xs font-medium text-black/40">* {project.heroCaption}</p>}
         </section>
       )}
 

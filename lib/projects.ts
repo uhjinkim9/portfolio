@@ -20,6 +20,7 @@ export type Project = {
   description: string;
   tags: string[];
   heroImage?: string;
+  heroCaption?: string;
   liveUrl?: string;
   summary: string;
   sections: ProjectSection[];
@@ -120,7 +121,8 @@ export const projects: Project[] = [
     metricLabel: "데이터 정합성 확보",
     description: "현업의 수기 프로세스를 분석해 관리 기준을 사용자에서 자산 중심으로 재설계했습니다. 이동·회수·수리 이력과 프로젝트 비용 정산을 하나의 사이클로 연결했습니다.",
     tags: ["Java", "전자정부프레임워크", "React", "MariaDB", "Domain Modeling"],
-    heroImage: "/images/asset-erd.png",
+    heroImage: "/images/asset-management-masked.png",
+    heroCaption: "사내 시스템 화면으로, 보안을 위해 일부 정보와 식별 요소를 마스킹 처리했습니다.",
     summary: "프로젝트별 엑셀에 흩어진 자산 정보를 하나의 시스템으로 통합했습니다. 현업 인터뷰부터 데이터 모델링, API 구현까지 단독 수행하며 업무 언어를 추적 가능한 자산 생애주기로 변환했습니다.",
     sections: [
       { eyebrow: "Context", title: "엑셀의 행 사이에서 사라지는 자산 이력", body: ["총무 담당자가 프로젝트별 엑셀 파일에 자산을 수기 입력해 이동과 유휴 이력을 이어서 보기 어려웠습니다.", "누락된 데이터와 서로 다른 작성 기준 때문에 프로젝트별 비용 집계에도 반복적인 확인 작업이 필요했습니다."], bullets: ["자산 이동·유휴 이력 추적 불가", "수기 입력 오류와 데이터 누락", "프로젝트별 비용 집계 공수 증가"] },
