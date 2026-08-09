@@ -101,7 +101,7 @@ export const projects: Project[] = [
     liveUrl: "https://poo-diary.mercury-lab.uk",
     summary: "배변 상태와 음식 기록을 남기고 건강 패턴을 돌아볼 수 있는 모바일 중심 웹 MVP입니다. 프론트엔드와 API 개발에 그치지 않고, NHN Cloud 인프라에서 빌드부터 배포까지 이어지는 파이프라인을 직접 구성했습니다.",
     sections: [
-      { eyebrow: "Goal", title: "건강 기록을 부담 없이 남기는 모바일 MVP", body: ["매일 반복되는 건강 신호를 간편하게 기록하고, 음식과 상태의 관계를 나중에 돌아볼 수 있도록 설계했습니다.", "설치 장벽을 낮추기 위해 네이티브 앱 대신 PWA를 선택하고 모바일 화면에서 빠르게 기록하는 흐름에 집중했습니다."], bullets: ["모바일 중심 기록 경험", "PWA 설치 및 홈 화면 진입", "일별 기록과 패턴 탐색"], image: { src: "/images/poo-diary.jpeg", alt: "Poo Diary 주요 화면", caption: "배변 상태와 식단을 기록하는 Poo Diary 모바일 웹" } },
+      { eyebrow: "Goal", title: "건강 기록을 부담 없이 남기는 모바일 MVP", body: ["매일 반복되는 건강 신호를 간편하게 기록하고, 음식과 상태의 관계를 나중에 돌아볼 수 있도록 설계했습니다.", "설치 장벽을 낮추기 위해 네이티브 앱 대신 PWA를 선택하고 모바일 화면에서 빠르게 기록하는 흐름에 집중했습니다."], bullets: ["모바일 중심 기록 경험", "PWA 설치 및 홈 화면 진입", "일별 기록과 패턴 탐색"], image: { src: "/images/poo-diary-input.png", alt: "Poo Diary 기록 입력 화면", caption: "배변 상태와 식단을 간편하게 남기는 기록 입력 화면" } },
       { eyebrow: "Architecture", title: "작은 제품에도 경계가 분명한 구조를 적용하다", body: ["Next.js와 NestJS 애플리케이션을 pnpm Workspace와 Turborepo로 묶고 공통 타입은 @poo-diary/shared 패키지에서 관리했습니다.", "프론트엔드의 서버 상태는 TanStack Query로 관리하고 PostgreSQL과 TypeORM으로 기록 데이터의 일관성을 확보했습니다."], bullets: ["프론트·백엔드·공유 타입 모노레포", "TanStack Query 기반 서버 상태 관리", "NestJS·TypeORM·PostgreSQL 데이터 계층"] },
       { eyebrow: "Delivery", title: "NHN Cloud에서 배포 파이프라인을 직접 구성하다", body: ["NHN Cloud Compute 인스턴스에 k3s 환경을 구성하고, GitHub Actions에서 컨테이너 이미지를 빌드한 뒤 ArgoCD가 변경 사항을 배포하도록 연결했습니다.", "Ingress와 커스텀 도메인, HTTPS를 설정해 코드 변경부터 실제 서비스 반영까지 이어지는 배포 흐름을 직접 경험했습니다."], bullets: ["NHN Cloud Compute · k3s 환경 구성", "GitHub Actions 이미지 빌드", "ArgoCD 기반 GitOps 배포", "Ingress · Custom Domain · HTTPS 연결"] },
     ],
