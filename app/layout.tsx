@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   title: "김어진 | Full-stack Engineer",
   description:
     "비즈니스 도메인을 시스템 구조로 풀어내는 풀스택 개발자 김어진의 포트폴리오",
+  icons: {
+    icon: "/icons/mercury-lab.png",
+    shortcut: "/icons/mercury-lab.png",
+    apple: "/icons/mercury-lab.png",
+  },
 };
 
 export default function RootLayout({
