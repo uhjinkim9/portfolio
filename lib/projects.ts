@@ -31,9 +31,9 @@ export const projects: Project[] = [
   {
     slug: "groupware",
     no: "01",
-    kind: "Enterprise SaaS",
+    kind: "Enterprise Platform",
     title: "사내 그룹웨어 플랫폼",
-    subtitle: "MSA 기반 SaaS 그룹웨어 설계부터 배포까지",
+    subtitle: "MSA 기반 그룹웨어 플랫폼 설계부터 배포까지",
     period: "2025.03 — 2026.08",
     team: "3명",
     role: "기획 · 아키텍처 · 풀스택 · DevOps",
@@ -42,7 +42,7 @@ export const projects: Project[] = [
     description: "11개 마이크로서비스의 현실적인 리소스 문제를 분석해 유사 도메인을 통합하고, RabbitMQ 비동기 이벤트 구조로 메인 API와 후처리를 분리했습니다.",
     tags: ["Next.js", "NestJS", "TypeORM", "MariaDB", "RabbitMQ", "Kubernetes", "Jenkins"],
     heroImage: "/images/gw-screen-design.png",
-    summary: "조직 내 협업과 업무 관리를 하나의 경험으로 연결하는 MSA 기반 그룹웨어 SaaS입니다. 현업의 인사 정책을 비즈니스 로직으로 정제하고, 필요한 솔루션의 공백에는 직접 MVP를 구축하며 구조 설계부터 배포까지 전 과정을 주도했습니다.",
+    summary: "분산된 협업과 업무 관리 기능을 하나의 서비스로 통합하도록 설계한 MSA 기반 그룹웨어 플랫폼입니다. 메일·전자결재·게시판 등 기본 기능에 근태·연차 프로세스를 연동하고, 필요한 솔루션의 공백에는 직접 MVP를 구축하며 구조 설계부터 배포까지 전 과정을 주도했습니다.",
     sections: [
       {
         eyebrow: "Context",
@@ -66,9 +66,9 @@ export const projects: Project[] = [
       },
       {
         eyebrow: "Domain",
-        title: "인사 담당자의 업무 언어를 근태·연차 로직으로 정제하다",
-        body: ["근태와 연차 업무에는 반차, 연차 차감 기준, 근태 인정 범위처럼 문서만으로 파악하기 어려운 예외 규칙이 많았습니다.", "인사 담당자의 피드백과 실제 업무 흐름을 바탕으로 정책을 정리하고, AI 도구를 보조적으로 활용해 누락된 조건과 예외 사례를 검토했습니다. 정제된 규칙은 근태·연차 자동화 로직과 REST API의 기준으로 반영했습니다."],
-        bullets: ["인사 담당자 피드백 기반 요구사항 분석", "반차·연차 차감·근태 인정 범위의 예외 조건 정리", "정책을 비즈니스 로직과 REST API로 구현", "수기 확인이 필요했던 반복 업무 축소"],
+        title: "인사 담당자와 협업해 근태·연차 프로세스를 자동 연동하다",
+        body: ["기본 그룹웨어 기능인 메일·전자결재·게시판에 더해, 근태와 연차 업무를 하나의 플랫폼에서 처리할 수 있도록 인사 담당자와 협업했습니다.", "현업 피드백을 바탕으로 연차·반차 반영 방식, 연차 차감 기준과 근태 인정 범위 등의 기본 규칙 및 예외 조건을 정리했습니다. 정제한 정책을 비즈니스 로직과 REST API에 반영해 근태·연차 프로세스가 그룹웨어에 자동으로 연동되도록 구현했습니다."],
+        bullets: ["인사 담당자 피드백 기반 부서 간 요구사항 조율", "연차·반차 반영 및 근태 인정 범위의 기본·예외 규칙 정리", "근태·연차 비즈니스 로직과 REST API 구현", "기본 규칙과 예외 규칙을 시스템에 반영해 반복 업무 축소"],
       },
       {
         eyebrow: "0 to 1",
@@ -78,9 +78,9 @@ export const projects: Project[] = [
       },
       {
         eyebrow: "Delivery",
-        title: "운영 배포까지 이어지는 브랜치 관리 체계를 정립하다",
-        body: ["개발이 완료된 기능이 검증 단계를 거쳐 운영 환경에 안정적으로 반영될 수 있도록 GitHub 브랜치 흐름을 정리했습니다.", "development에서 기능을 통합하고 stage에서 배포 전 검증을 거친 뒤 production으로 반영하는 기준을 수립했습니다. 프로젝트 마무리 단계에서는 Kubernetes 운영 환경에 서비스를 배포하며 개발부터 운영까지의 흐름을 완결했습니다."],
-        bullets: ["development → stage → production 브랜치 흐름 정립", "환경별 검증과 운영 반영 기준 명문화", "Kubernetes 운영 환경 최종 배포", "개발부터 운영 배포까지 전 과정 마무리"],
+        title: "운영 환경 배포와 가오픈을 위한 브랜치 관리 체계를 정립하다",
+        body: ["개발이 완료된 기능이 검증 단계를 거쳐 가오픈 환경에 안정적으로 반영될 수 있도록 GitHub 브랜치 흐름을 정리했습니다.", "development에서 기능을 통합하고 stage에서 배포 전 검증을 거친 뒤 production으로 반영하는 기준을 수립했습니다. 프로젝트 마무리 단계에서는 Kubernetes 운영 환경에 서비스를 배포하고 가오픈까지 진행했습니다."],
+        bullets: ["development → stage → production 브랜치 흐름 정립", "환경별 검증과 배포 반영 기준 명문화", "Kubernetes 운영 환경 배포 및 가오픈", "개발부터 가오픈까지 전 과정 마무리"],
       },
       {
         eyebrow: "Process",
@@ -89,7 +89,7 @@ export const projects: Project[] = [
         bullets: ["코드 작성 패턴 일관성 확보", "불필요한 중복 생성 억제", "리팩터링과 리뷰 공수 단축"],
       },
     ],
-    outcomes: [{ value: "34%", label: "개발 환경 메모리 절감" }, { value: "3일", label: "메신저 MVP 단독 구축" }, { value: "0→1", label: "기획부터 운영 배포까지 주도" }],
+    outcomes: [{ value: "34%", label: "개발 환경 메모리 절감" }, { value: "3일", label: "메신저 MVP 단독 구축" }, { value: "0→1", label: "기획부터 배포·가오픈까지 주도" }],
   },
   {
     slug: "poo-diary",

@@ -56,7 +56,7 @@ export default function Home() {
           </div>
           <aside className="mt-16 border-t-2 border-ink lg:mt-0">
             {[
-              ["LATEST", "그룹웨어 SaaS 운영 배포 완료"],
+              ["LATEST", "그룹웨어 플랫폼 운영 배포 및 가오픈"],
               ["FOCUS", "Architecture · DX · DevOps"],
               ["EMAIL", "uhjinkim9@gmail.com"],
             ].map(([k, v]) => (
@@ -96,7 +96,7 @@ export default function Home() {
             <div className="mt-16 grid gap-px bg-white/15 sm:grid-cols-3">
               {[
                 ["3", "주요 구축 프로젝트"],
-                ["0 → 1", "기획부터 운영까지"],
+                ["0 → 1", "기획부터 가오픈까지"],
                 ["Full", "Frontend to DevOps"],
               ].map(([n, t]) => (
                 <div key={t} className="bg-ink py-7 sm:px-6">
@@ -204,7 +204,7 @@ export default function Home() {
                 ServerCog,
                 "03",
                 "주도적 실행력",
-                "UI/UX 설계부터 API, 배포 자동화와 운영 환경까지 제품의 전 생애주기를 완주합니다.",
+                "UI/UX 설계부터 API, 배포 자동화와 가오픈 환경까지 제품 구축의 전 과정을 완주합니다.",
               ],
             ].map(([Icon, no, title, desc]) => {
               const C = Icon as typeof Database;
