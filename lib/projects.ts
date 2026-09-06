@@ -181,7 +181,7 @@ export const projects: Project[] = [
     metric: "GitOps",
     metricLabel: "배포 파이프라인 직접 구축",
     description:
-      "배변 상태와 음식 기록을 연결하는 모바일 웹 MVP입니다. 애플리케이션 구현뿐 아니라 NHN Cloud의 k3s 환경과 GitOps 배포 파이프라인을 직접 구성해 실제 서비스로 배포했습니다.",
+      "배변 상태와 음식 기록을 연결하는 모바일 웹 MVP입니다. 애플리케이션 구현뿐 아니라 NHN Cloud의 k3s 환경과 GitOps 배포 파이프라인을 직접 구성해 배포했습니다.",
     tags: [
       "Next.js 14",
       "NestJS",
@@ -263,7 +263,7 @@ export const projects: Project[] = [
         title: "NHN Cloud에서 배포 파이프라인을 직접 구성하다",
         body: [
           "NHN Cloud Compute 인스턴스에 k3s 환경을 구성하고, GitHub Actions에서 컨테이너 이미지를 빌드한 뒤 ArgoCD가 변경 사항을 배포하도록 연결했습니다.",
-          "Ingress와 커스텀 도메인, HTTPS를 설정해 코드 변경부터 실제 서비스 반영까지 이어지는 배포 흐름을 직접 경험했습니다.",
+          "Ingress와 커스텀 도메인, HTTPS를 설정해 코드 변경부터 서비스 반영까지 이어지는 배포 흐름을 직접 경험했습니다.",
         ],
         bullets: [
           "NHN Cloud Compute · k3s 환경 구성",
@@ -362,9 +362,10 @@ export const otherExperiences = [
     kind: "Personal Product",
     title: "공유 가계부",
     description:
-      "가계 구성원이 수입과 지출을 함께 관리할 수 있도록 설계한 웹 애플리케이션입니다. OWNER·MEMBER·VIEWER 역할에 따라 접근 범위를 구분했으며, 현재 소수의 지인이 실제로 사용하고 있어 피드백을 바탕으로 기능을 보완하고 있습니다.",
+      "가계 구성원이 수입과 지출을 함께 관리할 수 있도록 설계한 웹 애플리케이션입니다. OWNER·MEMBER·VIEWER 역할에 따라 접근 범위를 구분하고 직접 제작한 calendar-mercury-lab을 적용했으며, 현재 소수의 지인이 실제로 사용하고 있어 피드백을 바탕으로 기능을 보완하고 있습니다.",
     tags: ["Next.js", "NestJS", "PostgreSQL", "Role-based Access"],
     href: "https://household-budget.mercury-lab.uk/",
+    hrefLabel: "서비스 바로가기",
   },
   {
     no: "B",
@@ -374,5 +375,16 @@ export const otherExperiences = [
       "개인 실험 프로젝트를 ‘Mercury Lab’이라는 이름으로 브랜딩하고, mercury-lab.uk 도메인에 배포한 서비스들을 하나의 계정으로 이용할 수 있도록 Keycloak 기반 중앙 인증 체계를 설계했습니다. Realm·Client·Scope·Audience·Role 구조와 Authorization Code + PKCE 기반 BFF 인증 흐름, HttpOnly 쿠키 기반 토큰 갱신, 기존 계정의 안전한 연결과 단계적 전환 전략을 1차 구현했으며 운영 검증을 진행 중입니다.",
     tags: ["Keycloak", "OIDC", "PKCE", "BFF", "Access / Refresh Token"],
     href: undefined,
+    hrefLabel: undefined,
+  },
+  {
+    no: "C",
+    kind: "Open Source · npm Library",
+    title: "한국형 React 캘린더 라이브러리",
+    description:
+      "반응형 UI와 반복 일정·다중 캘린더 보기를 지원하는 TypeScript 기반 React 라이브러리 calendar-mercury-lab을 제작해 npm에 배포했습니다. 한국 공휴일 데이터 API 키를 전달하면 공휴일을 조회해 캘린더에 표시할 수 있으며, 공유 가계부의 일정 화면에 직접 적용해 공유 가계부에서 검증하고 있습니다.",
+    tags: ["React", "TypeScript", "npm", "Korean Holidays"],
+    href: "https://www.npmjs.com/package/calendar-mercury-lab",
+    hrefLabel: "npm 패키지 바로가기",
   },
 ];

@@ -226,7 +226,7 @@ export default function Home() {
                         rel="noreferrer"
                         className="inline-flex items-center gap-1.5 text-xs font-black text-ember underline decoration-1 underline-offset-4"
                       >
-                        서비스 바로가기 <ArrowUpRight size={13} />
+                        {experience.hrefLabel} <ArrowUpRight size={13} />
                       </a>
                     )}
                   </div>

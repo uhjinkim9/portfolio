@@ -57,8 +57,9 @@
 
 ### 그 외 경험
 
-- **공유 가계부:** 가계 구성원이 수입과 지출을 함께 관리하고, `OWNER`·`MEMBER`·`VIEWER` 역할별 접근 범위를 구분한 개인 프로젝트. 현재 소수의 지인이 사용 중이며 피드백을 바탕으로 기능 보완 진행 중 — [서비스 바로가기](https://household-budget.mercury-lab.uk/)
+- **공유 가계부:** 가계 구성원이 수입과 지출을 함께 관리하고, `OWNER`·`MEMBER`·`VIEWER` 역할별 접근 범위를 구분한 개인 프로젝트. 직접 제작한 캘린더 라이브러리를 적용했으며 현재 소수의 지인이 사용 중 — [서비스 바로가기](https://household-budget.mercury-lab.uk/)
 - **개인 프로젝트 통합 로그인:** 개인 실험 프로젝트를 `Mercury Lab`으로 브랜딩하고, `mercury-lab.uk` 도메인에 배포한 서비스들을 하나의 계정으로 이용할 수 있도록 Keycloak 중앙 인증 체계를 설계 및 1차 구현. Authorization Code + PKCE 기반 인증, HttpOnly 쿠키 갱신, 기존 계정 연결과 단계적 전환 전략을 구성했으며 운영 검증 진행 중
+- **한국형 React 캘린더 라이브러리:** 반응형 UI, 반복 일정과 다중 캘린더 보기를 지원하고 한국 공휴일 데이터 API 키를 이용해 공휴일을 조회·표시할 수 있는 `calendar-mercury-lab`을 제작해 npm에 배포. 공유 가계부에 적용해 실제 서비스에서 사용 중 — [npm 패키지 바로가기](https://www.npmjs.com/package/calendar-mercury-lab)
 
 ## 기술 스택
 
