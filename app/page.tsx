@@ -11,7 +11,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { Header } from "@/components/header";
-import { projects } from "@/lib/projects";
+import { otherExperiences, projects } from "@/lib/projects";
 
 const skills = [
   "Next.js",
@@ -174,6 +174,66 @@ export default function Home() {
               </article>
             ))}
           </div>
+
+          <section className="mt-24 border-t-2 border-ink md:mt-32">
+            <div className="flex items-end justify-between border-b border-line py-5">
+              <div>
+                <p className="text-xs font-black uppercase tracking-[.14em] text-ember">
+                  Other Experience
+                </p>
+                <h3 className="mt-2 text-2xl font-black tracking-tight">그 외</h3>
+              </div>
+              <span className="hidden text-xs font-bold text-black/35 sm:block">
+                Products &amp; Systems
+              </span>
+            </div>
+
+            <div>
+              {otherExperiences.map((experience) => (
+                <article
+                  key={experience.no}
+                  className="group grid gap-4 border-b border-line py-6 transition-colors hover:bg-white sm:grid-cols-[48px_1fr] sm:px-4 lg:grid-cols-[48px_240px_1fr_auto] lg:items-center lg:gap-7"
+                >
+                  <span className="text-xs font-black text-ember">
+                    {experience.no}
+                  </span>
+                  <div>
+                    <p className="text-[10px] font-black uppercase tracking-[.12em] text-black/35">
+                      {experience.kind}
+                    </p>
+                    <h4 className="mt-1 text-lg font-black tracking-tight">
+                      {experience.title}
+                    </h4>
+                  </div>
+                  <p className="text-sm leading-6 text-black/60 sm:col-start-2 lg:col-start-auto">
+                    {experience.description}
+                  </p>
+                  <div className="flex flex-col items-start gap-3 sm:col-start-2 lg:col-start-auto lg:max-w-[260px] lg:items-end">
+                    <div className="flex flex-wrap gap-1.5 lg:justify-end">
+                      {experience.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="border border-line bg-paper px-2 py-1 text-[10px] font-bold text-black/55"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    {experience.href && (
+                      <a
+                        href={experience.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs font-black text-ember underline decoration-1 underline-offset-4"
+                      >
+                        서비스 바로가기 <ArrowUpRight size={13} />
+                      </a>
+                    )}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
         </div>
       </section>
 

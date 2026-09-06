@@ -243,6 +243,22 @@ export const projects: Project[] = [
         ],
       },
       {
+        eyebrow: "Identity Migration",
+        title: "Device ID 사용자를 통합 계정으로 점진적으로 전환하다",
+        body: [
+          "초기 MVP는 별도 가입 없이 사용할 수 있도록 Device ID로 사용자를 식별했습니다. 진입 장벽은 낮았지만 기기가 바뀌면 기존 기록에 접근하기 어렵고, 여러 기기에서 같은 데이터를 이용할 수 없다는 한계가 있었습니다.",
+          "통합 로그인 도입 후에도 기존 사용 방식을 즉시 중단하지 않고 Device ID 세션과 OIDC 계정 로그인을 병행했습니다. 기존 사용자에게 통합 계정 생성 또는 로그인을 안내하고, 사용자가 연결을 선택한 경우에만 기존 기록을 Mercury Lab 계정에 연결하도록 구성했습니다.",
+          "계정 연결 상태와 데이터 이전 상태를 분리해 관리하고, 하나의 기기 계정이나 통합 계정이 중복 연결되지 않도록 제한했습니다. 연결에 실패하면 기존 기록과 Device ID 이용 흐름을 유지해 인증 전환 과정에서 데이터 접근이 끊기지 않도록 했습니다.",
+        ],
+        bullets: [
+          "Device ID 세션과 OIDC 통합 계정 로그인의 병행 운영",
+          "off → prompt → required 단계로 전환 강도를 조정할 수 있는 구조",
+          "사용자 동의 후 기존 기록을 통합 계정에 연결",
+          "기기 계정·통합 계정의 중복 연결 방지",
+          "연결 실패 시 기존 데이터와 이용 흐름 유지",
+        ],
+      },
+      {
         eyebrow: "Delivery",
         title: "NHN Cloud에서 배포 파이프라인을 직접 구성하다",
         body: [
@@ -339,3 +355,24 @@ export const projects: Project[] = [
 export function getProject(slug: string) {
   return projects.find((project) => project.slug === slug);
 }
+
+export const otherExperiences = [
+  {
+    no: "A",
+    kind: "Personal Product",
+    title: "공유 가계부",
+    description:
+      "가계 구성원이 수입과 지출을 함께 관리할 수 있도록 설계한 웹 애플리케이션입니다. OWNER·MEMBER·VIEWER 역할에 따라 접근 범위를 구분했으며, 현재 소수의 지인이 실제로 사용하고 있어 피드백을 바탕으로 기능을 보완하고 있습니다.",
+    tags: ["Next.js", "NestJS", "PostgreSQL", "Role-based Access"],
+    href: "https://household-budget.mercury-lab.uk/",
+  },
+  {
+    no: "B",
+    kind: "Identity Platform · 설계 및 1차 구현",
+    title: "개인 프로젝트 통합 로그인",
+    description:
+      "개인 실험 프로젝트를 ‘Mercury Lab’이라는 이름으로 브랜딩하고, mercury-lab.uk 도메인에 배포한 서비스들을 하나의 계정으로 이용할 수 있도록 Keycloak 기반 중앙 인증 체계를 설계했습니다. Realm·Client·Scope·Audience·Role 구조와 Authorization Code + PKCE 기반 BFF 인증 흐름, HttpOnly 쿠키 기반 토큰 갱신, 기존 계정의 안전한 연결과 단계적 전환 전략을 1차 구현했으며 운영 검증을 진행 중입니다.",
+    tags: ["Keycloak", "OIDC", "PKCE", "BFF", "Access / Refresh Token"],
+    href: undefined,
+  },
+];
