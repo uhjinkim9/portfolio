@@ -4,6 +4,7 @@ import {
   ArrowDown,
   ArrowUpRight,
   Database,
+  Download,
   Github,
   Layers3,
   Mail,
@@ -20,10 +21,13 @@ const skills = [
   "TypeScript",
   "TypeORM",
   "MariaDB",
+  "PostgreSQL",
   "RabbitMQ",
   "Docker",
   "Kubernetes",
   "Jenkins",
+  "ArgoCD",
+  "Keycloak",
 ];
 
 export default function Home() {
@@ -52,12 +56,19 @@ export default function Home() {
               >
                 프로젝트 보기 <ArrowDown size={17} />
               </a>
+              <a
+                href="/kim-eojin-portfolio.pdf"
+                download="김어진-포트폴리오.pdf"
+                className="flex items-center gap-3 border border-ink px-6 py-4 text-sm font-bold transition hover:border-ember hover:bg-ember hover:text-white"
+              >
+                PDF 다운로드 <Download size={17} />
+              </a>
             </div>
           </div>
           <aside className="mt-16 border-t-2 border-ink lg:mt-0">
             {[
-              ["LATEST", "그룹웨어 플랫폼 운영 배포 및 가오픈"],
-              ["FOCUS", "Architecture · DX · DevOps"],
+              ["LATEST", "개인 서비스 통합 인증·가계부 개발"],
+              ["FOCUS", "Domain · Delivery · FullStack"],
               ["EMAIL", "uhjinkim9@gmail.com"],
             ].map(([k, v]) => (
               <div
@@ -134,8 +145,25 @@ export default function Home() {
                   <div className="absolute left-0 top-0 z-10 bg-ember px-4 py-2 text-xs font-black text-white">
                     {p.no}
                   </div>
-                  <Link href={`/projects/${p.slug}`} className="project-image relative block aspect-[16/10] bg-paper fine-grid">
-                    {p.heroImage ? <Image src={p.heroImage} alt={`${p.title} 대표 이미지`} fill className="object-contain p-4" sizes="(max-width: 1024px) 100vw, 58vw"/> : <div className="grid size-full place-items-center"><span className="border border-black/15 bg-paper px-5 py-3 text-xs font-black text-black/40">PROJECT CASE STUDY</span></div>}
+                  <Link
+                    href={`/projects/${p.slug}`}
+                    className="project-image relative block aspect-[16/10] bg-paper fine-grid"
+                  >
+                    {p.heroImage ? (
+                      <Image
+                        src={p.heroImage}
+                        alt={`${p.title} 대표 이미지`}
+                        fill
+                        className="object-contain p-4"
+                        sizes="(max-width: 1024px) 100vw, 58vw"
+                      />
+                    ) : (
+                      <div className="grid size-full place-items-center">
+                        <span className="border border-black/15 bg-paper px-5 py-3 text-xs font-black text-black/40">
+                          PROJECT CASE STUDY
+                        </span>
+                      </div>
+                    )}
                   </Link>
                 </div>
                 <div
@@ -169,7 +197,12 @@ export default function Home() {
                       </span>
                     ))}
                   </div>
-                  <Link href={`/projects/${p.slug}`} className="mt-7 inline-flex items-center gap-2 self-start text-sm font-black underline decoration-ember decoration-2 underline-offset-4">프로젝트 자세히 보기 <ArrowUpRight size={16} /></Link>
+                  <Link
+                    href={`/projects/${p.slug}`}
+                    className="mt-7 inline-flex items-center gap-2 self-start text-sm font-black underline decoration-ember decoration-2 underline-offset-4"
+                  >
+                    프로젝트 자세히 보기 <ArrowUpRight size={16} />
+                  </Link>
                 </div>
               </article>
             ))}
@@ -181,7 +214,9 @@ export default function Home() {
                 <p className="text-xs font-black uppercase tracking-[.14em] text-ember">
                   Other Experience
                 </p>
-                <h3 className="mt-2 text-2xl font-black tracking-tight">그 외</h3>
+                <h3 className="mt-2 text-2xl font-black tracking-tight">
+                  그 외
+                </h3>
               </div>
               <span className="hidden text-xs font-bold text-black/35 sm:block">
                 Products &amp; Systems
@@ -198,7 +233,7 @@ export default function Home() {
                     {experience.no}
                   </span>
                   <div>
-                    <p className="text-[10px] font-black uppercase tracking-[.12em] text-black/35">
+                    <p className="whitespace-nowrap text-[10px] font-black uppercase tracking-[.12em] text-black/35">
                       {experience.kind}
                     </p>
                     <h4 className="mt-1 text-lg font-black tracking-tight">
@@ -257,14 +292,14 @@ export default function Home() {
               [
                 Layers3,
                 "02",
-                "아키텍처 설계",
-                "서비스 규모와 팀의 현실을 함께 고려해 확장 가능하면서도 운영 가능한 구조를 선택합니다.",
+                "주도적 실행력",
+                "UI/UX 설계부터 API, 배포 자동화와 가오픈 환경까지 제품 구축의 전 과정을 완주합니다.",
               ],
               [
                 ServerCog,
                 "03",
-                "주도적 실행력",
-                "UI/UX 설계부터 API, 배포 자동화와 가오픈 환경까지 제품 구축의 전 과정을 완주합니다.",
+                "빠른 기술 적용 & AI 활용",
+                "생소한 언어나 스택을 빠르게 습득하고, AI 도구와 명확한 가이드를 활용해 개발 생산성을 높입니다.",
               ],
             ].map(([Icon, no, title, desc]) => {
               const C = Icon as typeof Database;
